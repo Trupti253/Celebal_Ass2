@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Flask Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='calculator.css') }}"/>
+</head>
+<body>
+    <h1 class="large-text">Python Flask Calculator</h1>
+    <form method="post" action="{{ url_for('operation_result') }}" id="calculator_form">
+        <label for="Input1" class="large-text">Input1:</label>
+        <input type="text" name="Input1" id="Input1" class="large-text">
+        <br/>
+        <label for="Input2" class="large-text">Input2:</label>
+        <input type="text" name="Input2" id="Input2" class="large-text">
+        <br/>
+        <label for="operation" class="large-text">Operation:</label>
+        <select id="operation" name="operation" class="large-text">
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="/">Division</option>
+            <option value="*">Multiplication</option>
+        </select>
+        <br/>
+        <input type="submit" value="Submit" class="large-text"/>
+        <input type="reset" value="RESET" class="large-text" style="color: red;"/>
+    </form>
+    {% if calculation_success == True %}
+        <br/>
+        <p class="large-text">The calculation for {{input1}} {{operation}} {{input2}} is: {{result}}</p>
+    {% endif %}
+    {% if calculation_success == False %}
+        <br/>
+        <p class="large-text">{{error}}</p>
+        <p class="large-text">{{input1}} {{operation}} {{input2}} = "{{result}}"</p>
+    {% endif %}
+</body>
+</html>

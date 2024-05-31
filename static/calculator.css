@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    background-color: lightblue;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+}
+
+form {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(238, 182, 182);
+}
+
+input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 10px;
+    color: white;
+}
+
+p {
+    font-size: 18px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.large-text {
+    font-size: 1em;
+}
+
+h1.large-text {
+    font-size: 1em;
+}
+
+h2.large-text {
+    font-size: 1.3em;
+}
+
+input.large-text, select.large-text, button.large-text {
+    font-size: 1em;
+}
